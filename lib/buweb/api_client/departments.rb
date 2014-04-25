@@ -4,7 +4,7 @@ module BUWeb
       domain BUWebAPIClient.config.base_url
       use Weary::Middleware::HMACAuth, [BUWebAPIClient.config.credentials]
 
-      get :index, '/departments/' do |resource|
+      get :index, '/departments' do |resource|
         resource.optional :location
       end
 
